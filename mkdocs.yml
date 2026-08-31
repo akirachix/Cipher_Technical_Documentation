@@ -1,0 +1,23 @@
+site_name: FikaMarket Technical Documentation
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Architecture: architecture.md
+  - Frontend: frontend_web.md
+  - mobile: frontend_mobile.md
+  - Backend: backend.md
+  - Security: security.md
+  - Testing: testing.md
+  
+  - Glossary: glossary.md
+
+markdown_extensions:
+  - attr_list

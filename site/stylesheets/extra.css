@@ -1,0 +1,46 @@
+:root {
+  /* Exact Colors Extracted from Screenshot */
+  --screenshot-purple: #4A154B; /* Deep Slate Purple for main elements */
+  --screenshot-blue: #3F51B5;   /* Heading text color */
+  --screenshot-green: #00796B;  /* Divider line color */
+
+  /* MkDocs Theme Variables mapping */
+  --md-primary-fg-color: var(--screenshot-purple);
+  --md-primary-fg-color--dark: #300c32;
+  --md-accent-fg-color: var(--screenshot-green);
+  --md-typeset-color: #212121;
+}
+
+/* Style main page titles */
+.md-typeset h1 {
+  color: var(--screenshot-purple) !important;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: none !important; /* Clears default border */
+}
+
+/* Style Section Headings to match the screenshot */
+.md-typeset h2 {
+  color: var(--screenshot-blue) !important;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--screenshot-green); /* The precise green line */
+  padding-bottom: 6px;
+}
+
+/* Sub-sections layout */
+.md-typeset h3 {
+  color: #424242;
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin-top: 1.5rem;
+}
+
+/* Left Sidebar Menu Active Text */
+.md-nav__link--active {
+  color: var(--screenshot-green) !important;
+  font-weight: 700;
+}
