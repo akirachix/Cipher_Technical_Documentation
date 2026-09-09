@@ -63,7 +63,7 @@ npm --version
 
 
 
-![Dashboard UI](assets/dashboard.png)
+
 
 ### Setup and Installation
 
@@ -97,7 +97,31 @@ NEXT_PUBLIC_API_URL=https://your-backend-url/api/v1
 npm run dev
 ```
 
-The app runs at `http://localhost:3000` with hot reloading enabled.
+
+##UI Overview
+
+Once the command is run, the first page you will see is the login and signup page, followed by the dashboard.
+
+
+**Login**
+
+![Login UI](assets/login.png)
+
+**Signup**
+
+![Signup UI](assets/signup.png)
+
+**Dashboard**
+
+![Dashboard UI](assets/dashboard.png)
+
+
+This app is hosted at `https://cipher-dashboard-ten.vercel.app` .
+
+[View dashboard](https://cipher-dashboard-ten.vercel.app){ .md-button target="_blank" rel="noopener" }
+
+
+
 
 **package.json scripts**
 

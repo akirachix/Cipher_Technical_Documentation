@@ -1,41 +1,71 @@
 
-FikaMarket provides different interfaces for users by role. Farmers use **USSD**, Buyers use a **Mobile Application** and Lead Farmers use a **Dashboard**.
+# FIKAMARKET ARCHITECTURE 
 
-- **Farmer** - registers produce, checks live commodity prices, receives confirmations, via USSD
-- **Lead Farmer** - oversees active buys and sells, logs collection point name, verifies produce handovers, via Dashboard
-- **Buyer** - browses produce, places orders, pays, via Mobile Application
+## Client Interfaces
+FikaMarket delivers optimized interfaces tailored for each user role to account for different access requirements and hardware capabilities. Farmers list their crop yields, review prevailing commodity rates, and track system status updates strictly via a structured USSD interface. Lead Farmers monitor processing queues, log active collection point metadata, and authenticate on-site item handovers using a central administrative dashboard. Buyers search available marketplace catalog items, schedule specific delivery volumes, and execute financial clearings directly inside a dedicated mobile application.
 
-![FikaMarket System Architecture Diagram](assets/system-architecture.png)
+[![FikaMarket System Architecture Diagram](assets/FIKAMARKET SAD.png)](assets/FIKAMARKET SAD.png)
 
-[View full diagram](https://lucid.app/lucidchart/8d420c3a-9293-4261-8156-a244317c230b/edit?viewport_loc=1192%2C-787%2C3464%2C2178%2C0_0&invitationId=inv_23c5b8e0-e9a1-4da1-9094-49b0c22a03d2){ .md-button }
+
+## System Security Architecture
+The platform implements structural security frameworks designed to safeguard financial transactions, isolate operational user profiles, and secure edge network communication. This architecture governs access control across client portals and establishes encryption boundaries between core backend systems and external integrations.
+
+[![FikaMarket Security Architecture Diagram](assets/FikaMarket SAD SECURITY.drawio.png)](assets/FikaMarket SAD SECURITY.drawio.png)
+
 
 ## Backend Architecture
+The core system relies on a unified FikaMarket API layer that bridges consumer clients with backend database storage engines and external software vendors. This application code is structured into four isolated operational modules.
 
-A unified **FikaMarket API** connecting clients to the database and external services, organized into four modules:
+### Register Produce
+This component processes inbound network payloads originating from user sessions to log crop categories and volume attributes securely.
 
-| Module | Responsibility |
-|---|---|
-| **Register Produce** | Produce registration via USSD |
-| **Market Management** | Live prices, active buys/sells |
-| **Log Location** | Collection point verification |
-| **Produce Purchase** | Ordering and payments |
+### Market Management
+This service computes active marketplace metrics, calculates volume matching parameters, and surfaces historical or ongoing pricing metrics.
+
+### Log Location
+This utility processes spatial geometry coordinates to map and authorize valid transit endpoints for physical logistical fulfillment.
+
+### Produce Purchase
+This engine evaluates checkout requests, creates order sequences, and establishes conditional transaction state pipelines.
+
 
 ## External Integrations
 
-- **Africa's Talking API** —  live commodity prices, communication
-- **LocationIQ API** — location retrieval and verification
-- **Flutterwave API** — payments
-- **Telecom Service Provider** — USSD communication flow
+### Africa’s Talking API
+This gateway handles high-volume communication pipelines alongside routing updates regarding structural commodity price trends.
 
----
+### LocationIQ API
+This microservice transforms raw spatial variables to retrieve, map, and authenticate valid logistical coordination regions.
+
+### Flutterwave API
+This clearing house handles transactional pipelines, holding processing funds securely until conditional platform workflow states clear.
+
+### Telecom Service Provider
+This telecommunication bridge delivers underlying routing architecture to handle real-time session workflows for mobile clients.
+
 
 ## Data Flow
 
-1. **Registration** - Farmer registers via USSD, system creates Farmer and Location records.
-2. **Produce Submission** - Farmer submits crop, quantity, price and collection point. Lead Farmer verifies against past records. Stored as a Produce Listing.
-3. **Order Creation** - Buyer browses listings via the mobile application and places an order with a collection date. LocationIQ shows the collection point.
-4. **Payment** - Buyer pays via Flutterwave, funds are held in escrow. Telecom provider confirms the mobile money account.
-5. **Collection** - Farmer delivers the produce to the collection point. Lead Farmer confirms handover and verifies quantity.
-6. **Escrow Release** - Payment releases to the farmer immediately after the buyer confirms pickup, Receipt is issued.
-7. **Notifications** - Users get updates on orders, payments, collection,commodity price changes and release.
-8. **Transaction History** - Completed transactions feed the farmer's trading history.
+### 1. Registration
+The initialization loop triggers when a user submits details through a network gateway, prompting the system to generate associated entity records.
+
+### 2. Produce Submission
+The cataloging workflow maps a crop entry to an established distribution spot, requiring validation checks before publishing the final listing.
+
+### 3. Order Creation
+The customer funnel translates browse actions into explicit purchase orders linked directly to chosen delivery times and verified coordinates.
+
+### 4. Payment
+The checkout pipeline captures payment authorization, locks the settlement capital in an escrow state, and runs validation checks on the matching account.
+
+### 5. Collection
+The logistical phase tracks physical drop-offs at designated transit spots where platform managers perform manual inventory and confirmation audits.
+
+### 6. Escrow Release
+The final accounting settlement executes instantly upon delivery confirmation, clearing the locked escrow balance to the supplier while generating a ledger receipt.
+
+### 7. Notifications
+The logging sub-system captures vital step changes across the order lifecycle and broadcast-routes text notifications directly to target entities.
+
+### 8. Transaction History
+The ledger service appends every verified order lifecycle closure directly onto an immutable chronological history file for financial logging.

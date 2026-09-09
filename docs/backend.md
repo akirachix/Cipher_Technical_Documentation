@@ -34,6 +34,13 @@ Swagger provides an interactive page where developers and testers can view and t
 
 ---
 
+<div style="text-align: center; margin: 20px 0;">
+  <a href="../assets/datamodel.png" target="_blank" style="display: inline-block; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="../assets/datamodel.png" alt="Data Models Diagram" style="max-width: 100%; height: auto; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(21, 74, 10, 0.1); transition: all 0.3s ease;" />
+  </a>
+  <p style="font-size: 0.9em; color: #0a270d; margin-top: 8px;"><em>Data Models Overview</em></p>
+</div>
+
 ## Backend Architecture
 
 The backend is divided into simple layers. Each layer has a specific responsibility.
@@ -162,24 +169,72 @@ The local Swagger documentation is available at:
 
 ## API Error Handling
 
-The API uses standard HT
-The local Swagger documentation is then available at:
+The API uses standard HTTP status codes to communicate the result of a request.
 
-[Open Local Swagger](http://127.0.0.1:8000/docs)
+<table id="error-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; transition: transform 0.3s ease;">
+  <thead>
+    <tr style="background-color: #f44336; color: white;">
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left; width: 15%;">Code</th>
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left; width: 85%;">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">200</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Request successful</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">400</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Invalid or missing information</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">401</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Authentication required</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">402</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Payment was not completed</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">403</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">User does not have permission</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">404</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Requested resource was not found</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">409</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Request conflicts with existing data</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">422</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Submitted information is invalid</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">429</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Too many requests</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">500</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Server or database error</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">502</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Bad Gateway</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">503</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Service Unavailable</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">504</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Gateway Timeout</td>
+    </tr>
+  </tbody>
+</table>
 
----TP status codes to communicate the result of a request.
-
-| Code | Meaning                          |
-| ---: | -------------------------------- |
-|  200 | Request successful               |
-|  400 | Invalid or missing information   |
-|  401 | Authentication required          |
-|  402 | Payment was not completed        |
-|  403 | User does not have permission    |
-|  404 | Requested resource was not found |
-|  422 | Submitted information is invalid |
-|  429 | Too many requests                |
-|  500 | Server or database error         |
+<p> Instead of guessing what went wrong, external systems can instantly identify whether a request succeeded, failed due to a user error, or failed because of a server issue.</p>
 
 ---
 
@@ -249,9 +304,68 @@ The API can be tested using:
 * **Postman** for API test collections
 * Automated tests for validation, security, payments, and business rules
 
+<div style="text-align: center; margin: 20px 0;">
+  <a href="../assets/image.png" target="_blank" style="display: inline-block; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="../assets/image.png" alt="testing sample Diagram" style="max-width: 100%; height: auto; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(31, 113, 14, 0.1); transition: all 0.3s ease;" />
+  </a>
+  <p style="font-size: 0.9em; color: #06480e; margin-top: 8px;"><em>postman testing Overview</em></p>
+</div>
+
 Testing covers authentication, produce listings, orders, payments, inventory, USSD, notifications, and external integrations.
 
 [Open Swagger UI](https://fikamarket-0f4a777f24f8.herokuapp.com/docs)
+
+## Postman Test Scripts
+
+The following test scripts can be used in Postman to validate API responses.
+
+### Payment - Verifying
+
+```javascript
+let response = {};
+
+try {
+    response = pm.response.json();
+} catch (e) {
+    response = {};
+}
+
+const scenario = pm.variables.get("active_scenario") || "HAPPY_PATH";
+const status = pm.response.code;
+
+pm.test("Response execution runtime is under 2000ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(2000);
+});
+
+pm.test("Content-Type metadata is present", function () {
+    const contentType = pm.response.headers.get("Content-Type") || "";
+    pm.expect(contentType).to.not.be.empty;
+});
+
+if (status === 201) {
+
+    pm.test("201 - Payment was created successfully", function () {
+        pm.expect(status).to.eql(201);
+    });
+
+    pm.environment.set("payment_id", response.payment_id);
+    pm.environment.set("tx_ref", response.transaction_reference);
+    pm.environment.set("checkout_url", response.checkout_url);
+
+}
+
+else if (status === 400) {
+
+    pm.test("400 - Payment request contains invalid or missing data", function () {
+        pm.expect(status).to.eql(400);
+    });
+
+    pm.test("400 - Error response contains detail", function () {
+        pm.expect(response).to.have.property("detail");
+    });
+}
+
+```
 
 ---
 
@@ -279,9 +393,23 @@ Python naming conventions are used, including `snake_case` for files, functions,
 
 ---
 
+## Security Implementation
+
+The implementation safely intercepts, hashes, and validates inbound credentials while restricting access workflows exclusively to verified users.
+
+<div style="text-align: center; margin: 20px 0;">
+  <a href="../assets/security.png" target="_blank" style="display: inline-block; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="../assets/security.png" alt="Security Implementation" style="max-width: 100%; height: auto; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(21, 74, 10, 0.1); transition: all 0.3s ease;" />
+  </a>
+  <p style="font-size: 0.9em; color: #0a270d; margin-top: 8px;"><em>Security Implementation</em></p>
+</div>
+
+
+---
+
 ## Deployment
 
-FikaMarket is hosted on **Heroku**.
+FikaMarket is hosted on **Heroku** and utilizes a fully automated Continuous Integration and Continuous Deployment (CI/CD) pipeline powered by GitHub Actions. This setup ensures that new features and bug fixes are automatically tested and safely published without manual intervention.
 
 The deployment process uses GitHub Actions:
 
@@ -320,6 +448,5 @@ alembic upgrade head
 
 uvicorn main:app --reload
 ```
-
 
 

@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../overview/">
+        <link rel="prev" href="../backend/">
       
       
         <link rel="next" href="../testing/">
@@ -18,12 +18,12 @@
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Security - Cipher Technical Documentation</title>
+        <title>Security - FikaMarket Technical Documentation</title>
       
     
     
@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -63,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#fikamarket-security-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -75,10 +82,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Cipher Technical Documentation" class="md-header__button md-logo" aria-label="Cipher Technical Documentation" data-md-component="logo">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-header__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -89,7 +95,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Cipher Technical Documentation
+            FikaMarket Technical Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -173,13 +179,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Cipher Technical Documentation" class="md-nav__button md-logo" aria-label="Cipher Technical Documentation" data-md-component="logo">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-nav__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="../assets/logo.png" alt="logo">
 
     </a>
-    Cipher Technical Documentation
+    FikaMarket Technical Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -245,6 +250,60 @@
   
   
     <li class="md-nav__item">
+      <a href="../frontend_web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend_mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../backend/" class="md-nav__link">
         
   
@@ -253,87 +312,6 @@
     
   
     Backend
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../frontend/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Frontend
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting started
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
   
 
     
@@ -359,6 +337,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -376,6 +374,185 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-security-posture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Security Posture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-network-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Network Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-application-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Application Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Application Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JWT Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Password Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-based-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role-Based Access Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-level-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object-Level Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-webhook-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Webhook Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-physical-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Physical Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-incident-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Incident Response
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Risk Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -395,7 +572,34 @@
   <span class="md-ellipsis">
     
   
-    System Testing &amp; Quality Assurance
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
   
 
     
@@ -425,6 +629,176 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-security-posture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Security Posture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-network-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Network Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-application-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Application Security
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Application Security">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JWT Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#password-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Password Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-based-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role-Based Access Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#object-level-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object-Level Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-data-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Data Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-webhook-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Webhook Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-physical-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Physical Security
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-incident-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Incident Response
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Risk Management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -441,9 +815,209 @@
 
 
 
-  <h1>Security</h1>
+<h1 id="fikamarket-security-architecture">FikaMarket Security Architecture</h1>
+<h2 id="1-security-posture">1. Security Posture</h2>
+<p>FikaMarket uses a layered security approach to protect users, applications, data, and external services.</p>
+<pre><code class="language-text">User Zone
+    ↓
+Perimeter Security
+    ↓
+Trusted Application Zone
+    ↓
+Data Zone
+    ↕
+External Services
+</code></pre>
+<p>The backend acts as the main security layer between users, the database, and external services.</p>
+<hr />
+<h2 id="2-data-classification">2. Data Classification</h2>
+<p>FikaMarket handles user, produce, order, payment, location, and authentication data.</p>
+<p>Sensitive information such as passwords and authentication tokens requires additional protection.</p>
+<p>Passwords are hashed using <strong>bcrypt</strong> before being stored:</p>
+<pre><code class="language-python">def hash_password(password: str) -&gt; str:
+    pw = password.encode(&quot;utf-8&quot;)[:72]
+    return bcrypt.hashpw(pw, bcrypt.gensalt()).decode(&quot;utf-8&quot;)
+</code></pre>
+<p>The system never needs to store the user's original password.</p>
+<hr />
+<h2 id="3-network-security">3. Network Security</h2>
+<p>Incoming requests are expected to pass through the security perimeter before reaching the FikaMarket API.</p>
+<pre><code class="language-text">User
+ ↓
+Firewall / WAF
+ ↓
+API Gateway
+ ↓
+FikaMarket API
+ ↓
+Database
+</code></pre>
+<p>The perimeter provides controls such as:</p>
+<ul>
+<li>Request filtering</li>
+<li>Rate limiting</li>
+<li>DDoS protection</li>
+<li>Bot protection</li>
+<li>Request-size restrictions</li>
+<li>SQL injection protection</li>
+<li>Request logging</li>
+</ul>
+<p>The backend uses <strong>Bearer tokens</strong> for protected API requests:</p>
+<pre><code class="language-python">bearer_scheme = HTTPBearer()
+</code></pre>
+<hr />
+<h2 id="4-application-security">4. Application Security</h2>
+<p>The application provides authentication, authorization, validation, and session controls.</p>
+<h3 id="jwt-authentication">JWT Authentication</h3>
+<p>FikaMarket creates JWT access tokens containing the user's ID, role, and expiry time.</p>
+<pre><code class="language-python">def create_access_token(user_id: uuid.UUID, role: str):
+    expire = datetime.now(timezone.utc) + timedelta(
+        minutes=ACCESS_TOKEN_EXPIRE_MINUTES
+    )
 
+    to_encode = {
+        &quot;sub&quot;: str(user_id),
+        &quot;role&quot;: str(role),
+        &quot;exp&quot;: expire
+    }
 
+    return jwt.encode(
+        to_encode,
+        SECRET_KEY,
+        algorithm=ALGORITHM
+    )
+</code></pre>
+<p>The current implementation sets:</p>
+<pre><code class="language-python">ACCESS_TOKEN_EXPIRE_MINUTES = 30
+</code></pre>
+<p>Therefore, access tokens expire after <strong>30 minutes</strong>.</p>
+<h3 id="password-verification">Password Verification</h3>
+<p>Passwords are checked using bcrypt rather than comparing plain-text passwords:</p>
+<pre><code class="language-python">def verify_password(plain_password: str, hashed_password: str) -&gt; bool:
+    return bcrypt.checkpw(
+        plain_password.encode(&quot;utf-8&quot;),
+        hashed_password.encode(&quot;utf-8&quot;),
+    )
+</code></pre>
+<h3 id="role-based-access-control">Role-Based Access Control</h3>
+<p>The API restricts actions according to user roles.</p>
+<pre><code class="language-python">def check_role(current_user: User, allowed_roles: Sequence[UserRole]):
+    if current_user.user_role not in allowed_roles:
+        raise HTTPException(
+            status_code=403,
+            detail=&quot;You do not have permission to perform this action&quot;
+        )
+</code></pre>
+<p>FikaMarket supports roles including <strong>Farmer, Buyer, and Lead Farmer</strong>.</p>
+<h3 id="object-level-access">Object-Level Access</h3>
+<p>Users can access their own resources, while authorized roles can access additional resources:</p>
+<pre><code class="language-python">def require_self_or_role(
+    target_user_id,
+    current_user,
+    allowed_roles
+):
+    if current_user.user_id == target_user_id:
+        return
+
+    if current_user.user_role in allowed_roles:
+        return
+
+    raise HTTPException(
+        status_code=403,
+        detail=&quot;Access denied to this resource&quot;
+    )
+</code></pre>
+<p>This prevents users from accessing resources belonging to other users.</p>
+<hr />
+<h2 id="5-data-security">5. Data Security</h2>
+<p>FikaMarket uses <strong>PostgreSQL</strong> for application data.</p>
+<p>Database access is handled through the backend rather than directly from the frontend.</p>
+<p>Security controls include:</p>
+<ul>
+<li>Restricted database access</li>
+<li>Role-based permissions</li>
+<li>Least-privilege access</li>
+<li>Encryption where applicable</li>
+<li>Database backups</li>
+<li>Secure handling of credentials</li>
+</ul>
+<p>The application also uses a secret key to sign JWT tokens:</p>
+<pre><code class="language-python">SECRET_KEY = &quot;your-fallback-secret-key-for-local-development&quot;
+</code></pre>
+<p>For production, this value should be stored in a secure environment variable or Secret Manager and should not be committed to the repository.</p>
+<hr />
+<h2 id="6-webhook-security">6. Webhook Security</h2>
+<p>External services such as <strong>Flutterwave</strong> communicate with FikaMarket through webhooks.</p>
+<p>Webhook requests must be validated before changing payment or order information.</p>
+<pre><code class="language-text">External Service
+      ↓
+    Webhook
+      ↓
+ FikaMarket API
+      ↓
+   Validate
+      ↓
+Update Payment / Order
+</code></pre>
+<p>Vendor-specific webhook validation requirements should be applied to prevent unauthorized payment updates.</p>
+<hr />
+<h2 id="7-physical-security">7. Physical Security</h2>
+<p>Physical security focuses on protecting devices used to access FikaMarket.</p>
+<p>Users and development teams should:</p>
+<ul>
+<li>Protect devices with passwords or screen locks</li>
+<li>Restrict access to authorized people</li>
+<li>Keep devices and software updated</li>
+<li>Avoid storing sensitive credentials on shared devices</li>
+</ul>
+<p>Offline or cached information should also be protected from unauthorized access.</p>
+<hr />
+<h2 id="8-incident-response">8. Incident Response</h2>
+<p>The backend returns controlled responses when authentication or authorization fails.</p>
+<p>Examples include:</p>
+<pre><code class="language-text">401 Unauthorized
+→ Token is missing, expired, or invalid
+
+403 Forbidden
+→ User does not have permission
+</code></pre>
+<p>For example, an invalid JWT results in:</p>
+<pre><code class="language-python">raise HTTPException(
+    status_code=status.HTTP_401_UNAUTHORIZED,
+    detail=&quot;Could not validate credentials&quot;
+)
+</code></pre>
+<p>Security events such as authentication failures, unauthorized access, and important data changes should be logged and monitored.</p>
+<hr />
+<h2 id="9-risk-management">9. Risk Management</h2>
+<p>FikaMarket depends on external services including:</p>
+<ul>
+<li>Africa's Talking</li>
+<li>Flutterwave</li>
+<li>LocationIQ</li>
+<li>WFP/HDX</li>
+<li>Telecom Service Providers</li>
+</ul>
+<p>Risks are reduced through:</p>
+<ul>
+<li>Rate limiting</li>
+<li>Service monitoring</li>
+<li>Payment failure handling</li>
+<li>Cached locations</li>
+<li>Scheduled market-price updates</li>
+<li>Transaction rollback</li>
+</ul>
+<p>External-service failures should not leave the local database in an inconsistent state.</p>
+<hr />
+<p><strong>Security Architecture Overview</strong></p>
+<p><img alt="Security UI" src="../assets/security1.png" /></p>
+<h2 id="10-conclusion">10. Conclusion</h2>
+<p>FikaMarket uses multiple security layers covering <strong>network access, authentication, authorization, data protection, external integrations, and monitoring</strong>.</p>
+<p>The backend implements JWT authentication, bcrypt password hashing, RBAC, object-level authorization, and controlled error responses.</p>
+<p>For more information:</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1qeOpj85cGDaxafPCQVPepJ8V51C2uLMO/view?usp=sharing">Security system architecture</a></li>
+</ul>
 
 
 
@@ -493,7 +1067,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>

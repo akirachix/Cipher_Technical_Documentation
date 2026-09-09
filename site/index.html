@@ -16,12 +16,12 @@
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>Cipher Technical Documentation</title>
+        <title>FikaMarket Technical Documentation</title>
       
     
     
@@ -44,6 +44,8 @@
       
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -61,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#the-problem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -73,10 +80,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Cipher Technical Documentation" class="md-header__button md-logo" aria-label="Cipher Technical Documentation" data-md-component="logo">
+    <a href="." title="FikaMarket Technical Documentation" class="md-header__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -87,7 +93,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Cipher Technical Documentation
+            FikaMarket Technical Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -171,13 +177,12 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Cipher Technical Documentation" class="md-nav__button md-logo" aria-label="Cipher Technical Documentation" data-md-component="logo">
+    <a href="." title="FikaMarket Technical Documentation" class="md-nav__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <img src="assets/logo.png" alt="logo">
 
     </a>
-    Cipher Technical Documentation
+    FikaMarket Technical Documentation
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -196,6 +201,24 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -212,6 +235,161 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-uses-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Uses It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Onboarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produce-listings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produce Listings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-market-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live Market Prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buyer-marketplace-with-produce-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buyer Marketplace with Produce Matching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escrow-checkout-via-flutterwave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escrow Checkout via Flutterwave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmer-transaction-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmer Transaction History
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMS Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -251,6 +429,60 @@
   
   
     <li class="md-nav__item">
+      <a href="frontend_web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="frontend_mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="backend/" class="md-nav__link">
         
   
@@ -259,87 +491,6 @@
     
   
     Backend
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="frontend/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Frontend
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="getting-started/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Getting started
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="overview/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Overview
   
 
     
@@ -393,7 +544,34 @@
   <span class="md-ellipsis">
     
   
-    System Testing &amp; Quality Assurance
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
   
 
     
@@ -424,6 +602,152 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Problem
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Flow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-uses-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Uses It
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-onboarding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Onboarding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produce-listings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produce Listings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-market-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live Market Prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buyer-marketplace-with-produce-matching" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buyer Marketplace with Produce Matching
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escrow-checkout-via-flutterwave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escrow Checkout via Flutterwave
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmer-transaction-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmer Transaction History
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMS Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -441,7 +765,136 @@
 
   <h1>Home</h1>
 
-
+<p><img alt="FikaMarket Logo" src="assets/logo.png" /></p>
+<p><strong>FikaMarket</strong> is a data-driven agricultural marketplace connecting small-scale farmers in Zambia directly to produce buyers, cutting out exploitative middlemen.</p>
+<p><a class="md-button" href="https://cipherinformationalwebsite.vercel.app/" rel="noopener" target="_blank">For More Information</a></p>
+<h2 id="the-problem">The Problem</h2>
+<p>Agriculture drives 19% of Zambia's GDP and supports 70% of the rural population, yet small-scale farmers remain cut off from profitable markets. Relying on middlemen kills their bargaining power and market visibility, while post-harvest losses, low digital literacy, poor connectivity, and locked financial services stall any growth. These compounding barriers hit women farmers hardest, leaving them heavily excluded from tech, funding, and trade.</p>
+<h2 id="core-flow">Core Flow</h2>
+<pre><code class="language-text">┌─────────────────────┐
+│ 1. FARMER REGISTERS │
+│      PRODUCE        │
+│ Crop • Quantity     │
+│ Price • Availability│
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│ 2. PLATFORM CREATES     │
+│       LISTING           │
+│                         │
+│ Produce becomes visible │
+│ to potential buyers     │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│ 3. BUYER BROWSES AND    │
+│       PLACES ORDER      │
+│                         │
+│ Selects produce,        │
+│ quantity and collection │
+│ date                    │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│ 4. FARMER DELIVERS      │
+│    TO COLLECTION POINT  │
+│                         │
+│ Produce is taken to the │
+│ designated collection   │
+│ point                   │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│ 5. LEAD FARMER          │
+│      VERIFIES           │
+│                         │
+│ Confirms handover using │
+│ Order ID                │
+└──────────┬──────────────┘
+           │
+           ▼
+┌─────────────────────────┐
+│ 6. BUYER COLLECTS       │
+│      PRODUCE            │
+│                         │
+│ Buyer collects produce  │
+│ and payment is released │
+│ to the farmer           │
+└─────────────────────────┘
+</code></pre>
+<h2 id="who-uses-it">Who Uses It</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What they do</th>
+<th>How they access FikaMarket</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Farmer</strong></td>
+<td>Registers and lists available produce, views transactions and receives payments</td>
+<td>USSD / supported digital interface</td>
+</tr>
+<tr>
+<td><strong>Lead Farmer</strong></td>
+<td>Manages a designated collection point and verifies produce handovers</td>
+<td>Digital interface</td>
+</tr>
+<tr>
+<td><strong>Buyer</strong></td>
+<td>Searches for produce, places orders, selects collection dates and collects produce</td>
+<td>Mobile application</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-features">Key Features</h2>
+<h3 id="user-onboarding">User Onboarding</h3>
+<p>The platform begins with a role-specific onboarding process where farmers, Lead Farmers, and buyers register to establish verified profiles.</p>
+<h3 id="produce-listings">Produce Listings</h3>
+<p>Once registered, farmers utilize produce listings to digitally catalog their available crops by type, quantity, price, and location.</p>
+<h3 id="live-market-prices">Live Market Prices</h3>
+<p>Trading decisions are guided by live market prices that provide real-time pricing data to ensure transparency for both sides.</p>
+<h3 id="buyer-marketplace-with-produce-matching">Buyer Marketplace with Produce Matching</h3>
+<p>Buyers then navigate a buyer marketplace with produce matching that uses a filterable directory to pair them with ideal listings based on crop type, volume, and date.</p>
+<h3 id="escrow-checkout-via-flutterwave">Escrow Checkout via Flutterwave</h3>
+<p>When a match is found, buyers complete an escrow checkout via Flutterwave which holds their funds securely until delivery terms are met.</p>
+<h3 id="farmer-transaction-history">Farmer Transaction History</h3>
+<p>After a successful trade, the farmer transaction history updates a centralized, permanent ledger tracking all sales, pending escrow funds, and payouts.</p>
+<h3 id="sms-notifications">SMS Notifications</h3>
+<p>Throughout this entire cycle, automated SMS notifications send instant text alerts regarding orders, payments, and handovers to keep users informed.</p>
+<h2 id="system-overview">System Overview</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Components and Infrastructure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Client Layer</strong></td>
+<td>USSD interface optimized for farmers and a dedicated mobile application for buyers</td>
+</tr>
+<tr>
+<td><strong>Backend Services</strong></td>
+<td>Core microservices handling user registration, listings, matching, orders, and escrow</td>
+</tr>
+<tr>
+<td><strong>Integrations</strong></td>
+<td>External network bridges including Flutterwave, SMS gateway, and geolocation services</td>
+</tr>
+<tr>
+<td><strong>Data Stores</strong></td>
+<td>Persistent relational storage tracking user profiles, listings, orders, and transaction history</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -491,7 +944,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.expand"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.d7400e89.min.js"></script>

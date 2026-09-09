@@ -11,8 +11,8 @@ extra_css:
 nav:
   - Home: index.md
   - Architecture: architecture.md
-  - Frontend: frontend_web.md
-  - mobile: frontend_mobile.md
+  - Frontend web: frontend_web.md
+  - Frontend mobile: frontend_mobile.md
   - Backend: backend.md
   - Security: security.md
   - Testing: testing.md

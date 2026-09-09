@@ -271,6 +271,11 @@ Risks are reduced through:
 External-service failures should not leave the local database in an inconsistent state.
 
 ---
+ 
+**Security Architecture Overview**
+ <a href="../assets/security1.png" target="_blank" style="display: inline-block; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+![Security UI](assets/security1.png) 
+
 
 ## 10. Conclusion
 

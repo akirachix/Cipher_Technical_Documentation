@@ -153,6 +153,6 @@
 }
 
 .md-button:hover {
-  background-color: var(--fika-navy);
+  background-color: var (--fika-green);
   color: #FFFFFF !important;
 }
