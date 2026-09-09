@@ -151,7 +151,7 @@ The client application connects securely via API layers and **never accesses the
 
 ### Prerequisites Verification
 * Stable deployment of the **Flutter SDK**
-* **Dart Runtime Framework** environment pathing
+* **Dart Runtime Framework** environment pathings
 * **Git** version management core CLI tools
 * Initialized installation of **Android Studio** (with an active virtual emulator machine) or Apple **Xcode**
 

@@ -1,6 +1,6 @@
 # FikaMarket API Reference
 
-Welcome to the **FikaMarket API Reference**. The FikaMarket backend connects the PWA, USSD service, database, and external services used for produce listings, orders, payments, locations, notifications, and market prices.
+Welcome to the **FikaMarket API Reference**. The FikaMarket backend connects the PWA, USSD service, database, and external services used for produce listings, orders, payments, locations, notifications, and live market prices.
 
 ---
 

@@ -8,7 +8,7 @@
 [For More Information](https://cipherinformationalwebsite.vercel.app/ ){ .md-button target="_blank" rel="noopener" }
 
 ## The Problem
-Agriculture drives 19% of Zambia's GDP and supports 70% of the rural population, yet small-scale farmers remain cut off from profitable markets. Relying on middlemen kills their bargaining power and market visibility, while post-harvest losses, low digital literacy, poor connectivity, and locked financial services stall any growth. These compounding barriers hit women farmers hardest, leaving them heavily excluded from tech, funding, and trade.
+Agriculture drives 19% of Zambia's GDP and supports 70% of the rural population, yet small-scale farmers remain cut off from profitable markets. Relying on middlemen kills their bargaining power and market visibility, while post-harvest losses, low digital literacy, poor connectivity, and locked financial services stall any growth. These compounding barriers hit farmers hardest especially women, leaving them heavily excluded from tech, funding, and trade.
 
 
 ## Core Flow

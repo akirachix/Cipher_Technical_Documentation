@@ -16,7 +16,7 @@ Cipher_Technical_Documentation/
 │   ├── architecture.md           # System architecture & design principles
 │   ├── backend.md                # Backend services, APIs, data models
 │   ├── frontend_web.md           # Web frontend (React/Next.js, components, state)
-│   ├── frontend_mobile.md        # Mobile frontend (React Native/Expo, screens, navigation)
+│   ├── frontend_mobile.md        # Mobile frontend (Models,Services, screens, main navigation)
 │   ├── database.md               # Database schema, migrations, queries
 │   ├── deployment.md             # Infrastructure, CI/CD, environments
 │   ├── security.md               # Auth, encryption, compliance, threat model
