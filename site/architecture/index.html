@@ -1,0 +1,1095 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../frontend_web/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Architecture - FikaMarket Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fikamarket-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-header__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FikaMarket Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-nav__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    FikaMarket Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Interfaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-security-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Security Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register-produce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Register Produce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Location
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produce-purchase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produce Purchase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Integrations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#africas-talking-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Africa’s Talking API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locationiq-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LocationIQ API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flutterwave-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flutterwave API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telecom-service-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Telecom Service Provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-produce-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Produce Submission
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-order-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Order Creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Payment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-escrow-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Escrow Release
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-transaction-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Transaction History
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend_web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend_mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#client-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Interfaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-security-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Security Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#register-produce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Register Produce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Market Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log-location" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Log Location
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produce-purchase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produce Purchase
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Integrations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="External Integrations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#africas-talking-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Africa’s Talking API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locationiq-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LocationIQ API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flutterwave-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flutterwave API
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telecom-service-provider" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Telecom Service Provider
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Registration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-produce-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Produce Submission
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-order-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Order Creation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-payment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Payment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Collection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-escrow-release" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Escrow Release
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-transaction-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Transaction History
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fikamarket-architecture">FIKAMARKET ARCHITECTURE</h1>
+<h2 id="client-interfaces">Client Interfaces</h2>
+<p>FikaMarket delivers optimized interfaces tailored for each user role to account for different access requirements and hardware capabilities. Farmers list their crop yields, review prevailing commodity rates, and track system status updates strictly via a structured USSD interface. Lead Farmers monitor processing queues, log active collection point metadata, and authenticate on-site item handovers using a central administrative dashboard. Buyers search available marketplace catalog items, schedule specific delivery volumes, and execute financial clearings directly inside a dedicated mobile application.</p>
+<p><a href="../assets/FIKAMARKET%20SAD.png"><img alt="FikaMarket System Architecture Diagram" src="../assets/FIKAMARKET%20SAD.png" /></a></p>
+<h2 id="system-security-architecture">System Security Architecture</h2>
+<p>The platform implements structural security frameworks designed to safeguard financial transactions, isolate operational user profiles, and secure edge network communication. This architecture governs access control across client portals and establishes encryption boundaries between core backend systems and external integrations.</p>
+<p><a href="../assets/FikaMarket%20SAD%20SECURITY.drawio.png"><img alt="FikaMarket Security Architecture Diagram" src="../assets/FikaMarket%20SAD%20SECURITY.drawio.png" /></a></p>
+<h2 id="backend-architecture">Backend Architecture</h2>
+<p>The core system relies on a unified FikaMarket API layer that bridges consumer clients with backend database storage engines and external software vendors. This application code is structured into four isolated operational modules.</p>
+<h3 id="register-produce">Register Produce</h3>
+<p>This component processes inbound network payloads originating from user sessions to log crop categories and volume attributes securely.</p>
+<h3 id="market-management">Market Management</h3>
+<p>This service computes active marketplace metrics, calculates volume matching parameters, and surfaces historical or ongoing pricing metrics.</p>
+<h3 id="log-location">Log Location</h3>
+<p>This utility processes spatial geometry coordinates to map and authorize valid transit endpoints for physical logistical fulfillment.</p>
+<h3 id="produce-purchase">Produce Purchase</h3>
+<p>This engine evaluates checkout requests, creates order sequences, and establishes conditional transaction state pipelines.</p>
+<h2 id="external-integrations">External Integrations</h2>
+<h3 id="africas-talking-api">Africa’s Talking API</h3>
+<p>This gateway handles high-volume communication pipelines alongside routing updates regarding structural commodity price trends.</p>
+<h3 id="locationiq-api">LocationIQ API</h3>
+<p>This microservice transforms raw spatial variables to retrieve, map, and authenticate valid logistical coordination regions.</p>
+<h3 id="flutterwave-api">Flutterwave API</h3>
+<p>This clearing house handles transactional pipelines, holding processing funds securely until conditional platform workflow states clear.</p>
+<h3 id="telecom-service-provider">Telecom Service Provider</h3>
+<p>This telecommunication bridge delivers underlying routing architecture to handle real-time session workflows for mobile clients.</p>
+<h2 id="data-flow">Data Flow</h2>
+<h3 id="1-registration">1. Registration</h3>
+<p>The initialization loop triggers when a user submits details through a network gateway, prompting the system to generate associated entity records.</p>
+<h3 id="2-produce-submission">2. Produce Submission</h3>
+<p>The cataloging workflow maps a crop entry to an established distribution spot, requiring validation checks before publishing the final listing.</p>
+<h3 id="3-order-creation">3. Order Creation</h3>
+<p>The customer funnel translates browse actions into explicit purchase orders linked directly to chosen delivery times and verified coordinates.</p>
+<h3 id="4-payment">4. Payment</h3>
+<p>The checkout pipeline captures payment authorization, locks the settlement capital in an escrow state, and runs validation checks on the matching account.</p>
+<h3 id="5-collection">5. Collection</h3>
+<p>The logistical phase tracks physical drop-offs at designated transit spots where platform managers perform manual inventory and confirmation audits.</p>
+<h3 id="6-escrow-release">6. Escrow Release</h3>
+<p>The final accounting settlement executes instantly upon delivery confirmation, clearing the locked escrow balance to the supplier while generating a ledger receipt.</p>
+<h3 id="7-notifications">7. Notifications</h3>
+<p>The logging sub-system captures vital step changes across the order lifecycle and broadcast-routes text notifications directly to target entities.</p>
+<h3 id="8-transaction-history">8. Transaction History</h3>
+<p>The ledger service appends every verified order lifecycle closure directly onto an immutable chronological history file for financial logging.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

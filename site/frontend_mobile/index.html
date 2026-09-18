@@ -1,0 +1,1263 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../frontend_web/">
+      
+      
+        <link rel="next" href="../backend/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Frontend mobile - FikaMarket Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frontend-mobile" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-header__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FikaMarket Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Frontend mobile
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-nav__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    FikaMarket Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend_web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend mobile
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-audience-core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Audience &amp; Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tech-stack-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tech Stack Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-project-directory-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Project Directory Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-architecture-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Architecture Layers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Architecture Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-execution-workflow-dataflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Execution Workflow Dataflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-core-interface-components-ui-layout-designs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Core Interface Components &amp; UI Layout Designs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Core Interface Components &amp; UI Layout Designs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-account-onboarding-security-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Account Onboarding &amp; Security Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-home-page-marketplace-browsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Home page &amp; Marketplace Browsing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-buyer-account-profile-help-desk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Buyer Account Profile &amp; Help Desk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-secure-infrastructure-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Secure Infrastructure Standards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-operational-onboarding-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Operational Onboarding Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Operational Onboarding Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-local-project-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Local Project Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-development-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Development Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-channel-pipelines-farmer-ussd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Channel Pipelines: Farmer USSD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Channel Pipelines: Farmer USSD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-ussd-code-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the USSD Code Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ussd-screen-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USSD Screen Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-audience-core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Audience &amp; Core Capabilities
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-tech-stack-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Tech Stack Matrix
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-project-directory-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Project Directory Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-architecture-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Architecture Layers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Architecture Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-execution-workflow-dataflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Execution Workflow Dataflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-core-interface-components-ui-layout-designs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Core Interface Components &amp; UI Layout Designs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Core Interface Components &amp; UI Layout Designs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-account-onboarding-security-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Account Onboarding &amp; Security Gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-home-page-marketplace-browsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Home page &amp; Marketplace Browsing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-buyer-account-profile-help-desk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Buyer Account Profile &amp; Help Desk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-secure-infrastructure-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Secure Infrastructure Standards
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-operational-onboarding-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Operational Onboarding Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Operational Onboarding Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites Verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#initial-local-project-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Initial Local Project Construction
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-development-troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Development Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-channel-pipelines-farmer-ussd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Channel Pipelines: Farmer USSD
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Channel Pipelines: Farmer USSD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-ussd-code-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the USSD Code Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ussd-screen-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USSD Screen Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="frontend-mobile">Frontend Mobile</h1>
+<h2 id="1-overview">1. Overview</h2>
+<p>The <strong>FikaMarket</strong> mobile application is a <strong>Flutter-based smartphone application tailored for buyers</strong>. </p>
+<h3 id="target-audience-core-capabilities">Target Audience &amp; Core Capabilities</h3>
+<p>Buyers use this application to execute the following core workflows:
+* Register and log in secure user accounts
+* Browse available fresh agricultural produce
+* Add items seamlessly to their digital cart
+* Place orders and track delivery states
+* Manage buyer profiles and historical data
+* Request real-time customer and system help</p>
+<p>!!! note "Farmer Connectivity &amp; System Inclusivity"
+    <strong>Farmers do not use this mobile application.</strong> Farmers with feature phones interact with the FikaMarket ecosystem via <strong>USSD channels</strong>. This bypasses internet infrastructure constraints to ensure maximum regional accessibility.</p>
+<hr />
+<h2 id="2-tech-stack-matrix">2. Tech Stack Matrix</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Technology</th>
+<th style="text-align: left;">Role / Execution Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Framework</strong></td>
+<td style="text-align: left;">Flutter</td>
+<td style="text-align: left;">Cross-platform UI layout engine and widget orchestration</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Language</strong></td>
+<td style="text-align: left;">Dart</td>
+<td style="text-align: left;">Native strongly-typed execution and layout scripting</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Platform</strong></td>
+<td style="text-align: left;">Android / iOS</td>
+<td style="text-align: left;">Target compilation platforms for user smartphones</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Backend API</strong></td>
+<td style="text-align: left;">FastAPI</td>
+<td style="text-align: left;">High-performance Python REST API layer handling logic</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Database</strong></td>
+<td style="text-align: left;">PostgreSQL</td>
+<td style="text-align: left;">Relational transactional engine storing state data</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-project-directory-map">3. Project Directory Map</h2>
+<p>Below is the verified project directory layout mapping out where the core client application modules reside.</p>
+<pre><code class="language-text">Fikamarket/
+├── .dart_tool/                  # Internal build cache &amp; localized compilation scripts
+├── android/                     # Android native entry project files, manifests, and build flavors
+├── assets/                      # Static resource bundles (Images, local icons, Custom Fonts)
+│   └── design_mockups/          # Root directory for storing interface layouts and screenshot files
+├── build/                       # Binaries, apks, and bundles compiled during generation
+├── ios/                         # iOS native runner, schemes, and provisioning entitlements
+├── linux/                       # Native desktop Linux packaging configuration files
+├── macos/                       # Native macOS desktop pipeline infrastructure
+├── web/                         # Browser responsive application delivery bundles
+├── windows/                     # Native Windows desktop application configurations
+├── lib/                         # Active developer project workspace (Dart Source Code)
+│   ├── models/                  # Core local models mapping payload schemas
+│   │   ├── cart_model.dart             # Localized state engine for shopping cart mutations
+│   │   ├── product_item.dart           # Property definitions for marketplace produce items
+│   │   └── user_profile.dart           # Structural properties defining verified buyers
+│   ├── screens/                 # Target user presentation and interaction layouts
+│   │   ├── buyer_profile_screen.dart   # Interactive profile rendering and update fields
+│   │   ├── help_form_screen.dart       # Customer support ticket submittal form view
+│   │   ├── home_screen.dart            # Standard splash dashboard and welcome feed
+│   │   ├── signup_screen.dart          # New buyer account onboarding system flow
+│   │   ├── login_screen.dart           # Authentication input fields and gateway validation
+│   │   ├── main_navigation_screen.dart # Core routing shell holding persisting bottom tabs
+│   │   ├── market_place.dart           # Dynamic item listings feed grid layout
+│   │   └── personal_information_screen.dart # Personal identity update interfaces
+│   ├── services/                # Backend API abstraction hooks and HTTP data consumers
+│   └── main.dart                # Global initial execution setup and application loop runner
+├── .gitignore                   # Specified items excluded from standard source version control
+├── .metadata                    # Automatically managed Flutter tracking parameter data
+├── analysis_options.yaml        # Code style configuration lint rules
+├── pubspec.lock                 # Explicit snapshots specifying absolute dependent versions
+├── pubspec.yaml                 # Active manifest listing third-party asset libraries
+└── README.md                    # Basic markdown landing instructions document
+</code></pre>
+<hr />
+<h2 id="4-architecture-layers">4. Architecture Layers</h2>
+<p>The FikaMarket client code relies on three main architecture levels to guarantee a clean separation of concerns:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Layer</th>
+<th style="text-align: left;">Primary Engineering Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Models</strong></td>
+<td style="text-align: left;">Formulates app-wide data payloads (such as products, users, and shopping carts) into strongly typed entities.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Screens</strong></td>
+<td style="text-align: left;">Contains the presentational layout widgets providing the active user interface for buyers.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Services</strong></td>
+<td style="text-align: left;">Executes explicit network API request payloads out to the FikaMarket centralized cloud infrastructure.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="system-execution-workflow-dataflow">System Execution Workflow Dataflow</h3>
+<pre><code class="language-text">      [ Buyer UI Interaction ]
+                 ↓
+       Flutter Mobile App Screens
+                 ↓
+       Data Services Layer (REST API)
+                 ↓
+         FikaMarket FastAPI
+                 ↓
+       Central PostgreSQL Database
+</code></pre>
+<hr />
+<h2 id="5-core-interface-components-ui-layout-designs">5. Core Interface Components &amp; UI Layout Designs</h2>
+<p>Here is how the application layout translates into code modules, alongside live mobile design previews.</p>
+<h3 id="51-account-onboarding-security-gateway">5.1 Account Onboarding &amp; Security Gateway</h3>
+<ul>
+<li><strong>Routing Shell:</strong> Controlled globally inside <code>main_navigation_screen.dart</code>. It hosts the core scaffold layout and controls bottom navigation tabs.</li>
+<li><strong>Authentication Modules:</strong> Handled safely across <code>login_screen.dart</code> and <code>signup_screen.dart</code>.</li>
+</ul>
+<p><img alt="Login Screen" src="../assets/Signup-Login.png" /> </p>
+<div style="clear: both;"></div>
+
+<h3 id="52-home-page-marketplace-browsing">5.2 Home page &amp; Marketplace Browsing</h3>
+<ul>
+<li><strong>Buyer Portal View:</strong> This is the main screen the buyer sees after logging in.</li>
+<li>
+<p><strong>Marketplace Discovery Grid:</strong> Buyers browse and query active produce items using <code>market_place.dart</code>.</p>
+<p><img alt="Screen" src="../assets/HomeMarketplace.png" /> </p>
+</li>
+</ul>
+<div style="clear: both;"></div>
+
+<h3 id="53-buyer-account-profile-help-desk">5.3 Buyer Account Profile &amp; Help Desk</h3>
+<ul>
+<li><strong>Profile Management:</strong> Split across <code>buyer_profile_screen.dart</code> and <code>personal_information_screen.dart</code> to separate preferences from core account records.</li>
+</ul>
+<p><img alt="Screen" src="../assets/profile.png" /> </p>
+<div style="clear: both;"></div>
+
+<hr />
+<h2 id="6-secure-infrastructure-standards">6. Secure Infrastructure Standards</h2>
+<p>The client application connects securely via API layers and <strong>never accesses the transactional database engines directly</strong>.</p>
+<ul>
+<li><strong>User Authentication:</strong> Enforces explicit state check validations.</li>
+<li><strong>Local Security Scaffolds:</strong> Stores active secure tokens using low-level device security primitives (Keychain on iOS and Keystore on Android engines).</li>
+<li><strong>Sanitized Inputs:</strong> Strips problematic characters during string evaluation to neutralize execution injection threats.</li>
+<li><strong>Encrypted API Payload Handshakes:</strong> Leverages HTTPS and SSL parameters to prevent traffic eavesdropping.</li>
+</ul>
+<p><em>For complete infrastructural analysis, review the official <a href="https://drive.google.com/file/d/1qeOpj85cGDaxafPCQVPepJ8V51C2uLMO/view?usp=sharing">Security Architecture Document</a>.</em></p>
+<hr />
+<h2 id="7-operational-onboarding-setup">7. Operational Onboarding Setup</h2>
+<h3 id="prerequisites-verification">Prerequisites Verification</h3>
+<ul>
+<li>Stable deployment of the <strong>Flutter SDK</strong></li>
+<li><strong>Dart Runtime Framework</strong> environment pathing</li>
+<li><strong>Git</strong> version management core CLI tools</li>
+<li>Initialized installation of <strong>Android Studio</strong> (with an active virtual emulator machine) or Apple <strong>Xcode</strong></li>
+</ul>
+<h3 id="initial-local-project-construction">Initial Local Project Construction</h3>
+<pre><code class="language-bash"># Step 1: Clone the active source management tracking repository
+git clone &lt;repository-url&gt;
+
+# Step 2: Navigate inside your local project home workspace root
+cd fikamarket
+
+# Step 3: Fetch structural configuration updates and runtime libraries
+flutter pub get
+
+# Step 4: Run configuration framework sanity checking validation
+flutter doctor
+
+# Step 5: Initialize the local debugging application inside your active emulator target
+flutter run
+</code></pre>
+<hr />
+<h2 id="8-development-troubleshooting">8. Development Troubleshooting</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Identified Breakage</th>
+<th style="text-align: left;">Root Resolution Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Dependent libraries fail to compile</td>
+<td style="text-align: left;">Force an updating structural fetch by executing <code>flutter pub get</code> via shell</td>
+</tr>
+<tr>
+<td style="text-align: left;">Flutter environment errors out</td>
+<td style="text-align: left;">Execute <code>flutter doctor</code> to find missing toolchain components or paths</td>
+</tr>
+<tr>
+<td style="text-align: left;">Backend network API payload fails</td>
+<td style="text-align: left;">Confirm connectivity parameters, base address paths, and FastAPI health states</td>
+</tr>
+<tr>
+<td style="text-align: left;">Device virtualization emulator misses initialization</td>
+<td style="text-align: left;">Check virtualization engine settings and disk parameters in Android Studio/Xcode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-channel-pipelines-farmer-ussd">9. Channel Pipelines: Farmer USSD</h2>
+<p>Farmers utilizing basic <strong>feature phones</strong> don't download the Flutter code project. Instead, their cellular endpoints use automated <strong>USSD service lines</strong>, ensuring operational reliability even on simple networks.</p>
+<pre><code class="language-text">Farmer (Feature Phone)
+          ↓
+USSD Protocol Broadcast
+          ↓
+Africa's Talking Gateway Routing
+          ↓
+FikaMarket FastAPI Engine
+          ↓
+Central Production Database
+</code></pre>
+<h3 id="how-the-ussd-code-works">How the USSD Code Works</h3>
+<ol>
+<li><strong>Dialing:</strong> The farmer dials a unique shortcode (<code>*384#</code>) on their feature phone.</li>
+<li><strong>Gateway:</strong> The mobile phone network sends this request to the <strong>Africa's Talking Gateway</strong>.</li>
+<li><strong>API Call:</strong> The gateway converts the request and sends a standard HTTP message to our <strong>FastAPI Backend</strong>.</li>
+<li><strong>Database:</strong> The backend saves or reads the crop data from our <strong>PostgreSQL Database</strong> and sends a text menu back to the farmer.</li>
+</ol>
+<h3 id="ussd-screen-flow">USSD Screen Flow</h3>
+<p>Here is what the farmer sees on their screen when they use the service:</p>
+<p><strong>Main Menu:</strong></p>
+<pre><code class="language-text">Welcome to FikaMarket!
+1. Register as Farmer
+2. Sell My Produce
+3. Check Market prices
+4. Get Help
+</code></pre>
+<p><strong>After Selecting Option 2 (Sell My Produce):</strong></p>
+<pre><code class="language-text">Select Crop Type:
+1. Maize
+2. Soyabeans
+3. Groundnuts
+</code></pre>
+<p><strong>After Selecting Option 1 (Maize):</strong></p>
+<pre><code class="language-text">Enter quantity in 50kg bags:
+[ User types: 20 ]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

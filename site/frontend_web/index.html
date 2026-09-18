@@ -1,0 +1,1881 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../architecture/">
+      
+      
+        <link rel="next" href="../frontend_mobile/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Frontend web - FikaMarket Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frontend-web" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-header__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FikaMarket Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Frontend web
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-nav__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    FikaMarket Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend web
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lead-farmer-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lead Farmer Dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lead Farmer Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-and-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup and Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coding-standards-and-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coding Standards and Conventions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-based-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role-Based Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-signup-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login &amp; Signup Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forgot-reset-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forgot &amp; Reset Password
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend_mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lead-farmer-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lead Farmer Dashboard
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lead Farmer Dashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technology Stack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-and-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup and Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ui-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UI Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coding-standards-and-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coding Standards and Conventions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#role-based-routing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role-Based Routing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login-signup-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Login &amp; Signup Pages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forgot-reset-password" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forgot &amp; Reset Password
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shared-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shared Components
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Styling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#charts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Charts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="frontend-web">Frontend Web</h1>
+<h2 id="lead-farmer-dashboard">Lead Farmer Dashboard</h2>
+<h3 id="introduction">Introduction</h3>
+<p>The Lead Farmer Dashboard is the web client used by Lead Farmers to oversee collection points, monitor active buys and sells, and verify produce handovers. It is built with <code>Next.js</code> and <code>React</code>, and communicates with the FikaMarket API for all data operations.</p>
+<p>The dashboard is optimized for desktop use, since Lead Farmers typically manage collection point activity from a fixed location rather than in the field.</p>
+<h3 id="technology-stack">Technology Stack</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Technology</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Framework</td>
+<td>Next.js 16.3.1</td>
+<td>React framework with App Router</td>
+</tr>
+<tr>
+<td>UI Library</td>
+<td>React / React-DOM 19.2.8</td>
+<td>Component rendering</td>
+</tr>
+<tr>
+<td>Styling</td>
+<td>Tailwind CSS / PostCSS ^4</td>
+<td>Utility-first CSS</td>
+</tr>
+<tr>
+<td>Forms</td>
+<td>React Hook Form</td>
+<td>Form state and validation</td>
+</tr>
+<tr>
+<td>Charts</td>
+<td>Recharts</td>
+<td>Revenue and order data visualization</td>
+</tr>
+<tr>
+<td>Icons</td>
+<td>Lucide React</td>
+<td>Icon set</td>
+</tr>
+<tr>
+<td>Typography</td>
+<td>Roboto</td>
+<td>Base font</td>
+</tr>
+<tr>
+<td>Auth</td>
+<td>JWT</td>
+<td>Session and role verification</td>
+</tr>
+<tr>
+<td>Formatting</td>
+<td>ESLint + Prettier</td>
+<td>Code quality and formatting</td>
+</tr>
+<tr>
+<td>Hosting</td>
+<td>Vercel</td>
+<td>Production deployment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>Before setting up the dashboard, ensure the following are installed</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Version</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node.js</td>
+<td>18.x or later</td>
+<td>JavaScript runtime</td>
+</tr>
+<tr>
+<td>npm</td>
+<td>9.x or later</td>
+<td>Package manager</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>Latest</td>
+<td>Version control</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Install Node.js on Linux</strong></p>
+<pre><code class="language-bash">curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
+node --version
+npm --version
+</code></pre>
+<p><strong>Install Node.js on Windows</strong></p>
+<pre><code class="language-powershell">powershell -c &quot;irm https://community.chocolatey.org/install.ps1%7Ciex&quot;
+choco install nodejs
+node --version
+npm --version
+</code></pre>
+<p><strong>Install Node.js on macOS</strong></p>
+<pre><code class="language-bash">brew install node
+node --version
+npm --version
+</code></pre>
+<h3 id="setup-and-installation">Setup and Installation</h3>
+<p><strong>1. Clone the repository</strong></p>
+<pre><code class="language-bash">git clone https://github.com/your-organisation/fikamarket.git
+cd fikamarket/frontend
+</code></pre>
+<p><strong>2. Install dependencies</strong></p>
+<pre><code class="language-bash">npm install
+</code></pre>
+<p>This installs Next.js, React, Tailwind CSS, React Hook Form, Recharts, and Lucide React. This may take a few minutes depending on  your connection speed.</p>
+<p><strong>3. Configure environment variables</strong></p>
+<p>Create a <code>.env.local</code> file in the <code>frontend/</code> directory:</p>
+<pre><code class="language-text"># Required - backend API base URL
+NEXT_PUBLIC_API_URL=https://your-backend-url/api/v1
+</code></pre>
+<p><strong>4. Start the development server</strong></p>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+<h2 id="ui-overview">UI Overview</h2>
+<p>Once the command is run, the first page you will see is the login and signup page, followed by the dashboard.</p>
+<p><strong>Login</strong></p>
+<p><img alt="Login UI" src="../assets/login.png" /></p>
+<p><strong>Signup</strong></p>
+<p><img alt="Signup UI" src="../assets/signup.png" /></p>
+<p><strong>Dashboard</strong></p>
+<p><img alt="Dashboard UI" src="../assets/dashboard.png" /></p>
+<p>This app is hosted at <code>https://cipher-dashboard-ten.vercel.app</code> .</p>
+<p><a class="md-button" href="https://cipher-dashboard-ten.vercel.app" rel="noopener" target="_blank">View dashboard</a></p>
+<p><strong>package.json scripts</strong></p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;fikamarket_dashboard&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;private&quot;: true,
+  &quot;scripts&quot;: {
+    &quot;dev&quot;: &quot;next dev&quot;,
+    &quot;build&quot;: &quot;next build&quot;,
+    &quot;start&quot;: &quot;next start&quot;,
+    &quot;lint&quot;: &quot;eslint&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;lucide-react&quot;: &quot;^1.31.0&quot;,
+    &quot;next&quot;: &quot;16.3.1&quot;,
+    &quot;react&quot;: &quot;19.2.8&quot;,
+    &quot;react-dom&quot;: &quot;19.2.8&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@tailwindcss/postcss&quot;: &quot;^4&quot;,
+    &quot;@types/node&quot;: &quot;^20&quot;,
+    &quot;@types/react&quot;: &quot;^19&quot;,
+    &quot;@types/react-dom&quot;: &quot;^19&quot;,
+    &quot;eslint&quot;: &quot;^9&quot;,
+    &quot;eslint-config-next&quot;: &quot;16.3.1&quot;,
+    &quot;tailwindcss&quot;: &quot;^4&quot;,
+    &quot;typescript&quot;: &quot;^5&quot;
+  }
+}
+</code></pre>
+<h3 id="project-structure">Project Structure</h3>
+<pre><code>fikamarket/
++-- app/
+|   +-- components/       Global reusable layout components and visual blocks
+|   +-- login/            Authentication logic and input forms
+|   |   +-- page.js
+|   +-- signup/           User onboarding setup views
+|   |   +-- page.js
+|   +-- dashboard/        Core analytical layout displaying Recharts blocks
+|   |   +-- page.js
+|   +-- orders/           Fulfillment tables and processing lists
+|   |   +-- page.js
+|   +-- payments/         Financial status sheets and transaction columns
+|   |   +-- page.js
+|   |   +-- page.module.css
+|   +-- reports/          Regional yield print sheets and metrics
+|   |   +-- page.js
+|   +-- public/           Production-ready static image directories
+|   |   +-- fikamarket_logo.png
+|   +-- global.css        Root Tailwind styles
+|   +-- layout.js         Top-level application layout wrapper
+|   +-- page.js            Index entry route
+|   +-- page.module.css    Page styling
++-- node_modules/
++-- .gitignore
++-- eslint.config.mjs
++-- next.config.ts
++-- package.json
++-- package lock.json
++-- postcss.config.mjs
++-- README.md
+</code></pre>
+<h3 id="coding-standards-and-conventions">Coding Standards and Conventions</h3>
+<p><strong>Naming conventions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Convention</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Components</td>
+<td>PascalCase</td>
+<td><code>ProduceCard.js</code></td>
+</tr>
+<tr>
+<td>Functions &amp; variables</td>
+<td>camelCase</td>
+<td><code>fetchData()</code>, <code>isLoading</code></td>
+</tr>
+<tr>
+<td>Tailwind classes</td>
+<td>lowercase</td>
+<td><code>className="gap-4"</code></td>
+</tr>
+<tr>
+<td>Files &amp; pages</td>
+<td>kebab-case</td>
+<td><code>dashboard-charts</code></td>
+</tr>
+<tr>
+<td>Constants</td>
+<td>UPPER_SNAKE_CASE</td>
+<td><code>BASE_URL</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>File organization</strong></p>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>components/</code></td>
+<td>Reusable UI components</td>
+</tr>
+<tr>
+<td><code>login/</code>, <code>signup/</code></td>
+<td>Authentication and onboarding</td>
+</tr>
+<tr>
+<td><code>dashboard/</code></td>
+<td>Marketplace overview and analytics</td>
+</tr>
+<tr>
+<td><code>orders/</code></td>
+<td>Produce order management</td>
+</tr>
+<tr>
+<td><code>payments/</code></td>
+<td>Transaction and payment records</td>
+</tr>
+<tr>
+<td><code>reports/</code></td>
+<td>Purchase metrics and reports</td>
+</tr>
+<tr>
+<td><code>public/</code></td>
+<td>Static asset storage</td>
+</tr>
+<tr>
+<td><code>global.css</code></td>
+<td>App wide style definitions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="role-based-routing">Role-Based Routing</h3>
+<p>Access to the dashboard is scoped to a single role the <code>lead_farmer</code> role. On login, the frontend sends credentials to the FikaMarket API and receives a JWT. The role encoded in the token is checked before granting access to dashboard routes.</p>
+<pre><code class="language-text">User Login
+     |
+Authentication API
+     |
+  JWT returned
+     |
+Decode user role
+     |
+lead_farmer -&gt; Dashboard access
+</code></pre>
+<h3 id="authentication-flow">Authentication Flow</h3>
+<p>The frontend sends login credentials to the FikaMarket API. On success, the API returns a JWT containing the user's role, token expiry, and user ID. The token is stored on the client side and it is  used to authorize subsequent requests.</p>
+<pre><code class="language-text">     User
+      |
+Enter credentials
+      |
+   Login Page
+      |
+POST credentials
+      |
+Authentication API
+      |
+ +----+----+
+ |         |
+Invalid   Valid
+ |         |
+Error    JWT Token
+message    |
+        Session Storage
+           |
+      Dashboard Access
+</code></pre>
+<p><strong>Token storage</strong></p>
+<table>
+<thead>
+<tr>
+<th>Storage</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cookies</td>
+<td>On the server side auth for middleware protected routes</td>
+</tr>
+<tr>
+<td>sessionStorage</td>
+<td>Temporary session data</td>
+</tr>
+<tr>
+<td>localStorage</td>
+<td>Persists auth across page refreshes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Auth helpers</strong></p>
+<pre><code class="language-text">login()
+logout()
+getToken()
+isAuthenticated()
+getCurrentUser()
+getUserRole()
+isTokenExpired()
+</code></pre>
+<pre><code class="language-js">export function isAuthenticated() {
+  const token = getToken();
+  return Boolean(token);
+}
+</code></pre>
+<p><strong>Token payload</strong></p>
+<pre><code class="language-json">{
+  &quot;sub&quot;: &quot;user-uuid&quot;,
+  &quot;role&quot;: &quot;lead_farmer&quot;,
+  &quot;exp&quot;: 17645385500
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sub</code></td>
+<td>Unique ID of the authenticated user</td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td>User's application role</td>
+</tr>
+<tr>
+<td><code>exp</code></td>
+<td>JWT expiration timestamp</td>
+</tr>
+</tbody>
+</table>
+<h3 id="api-integration">API Integration</h3>
+<p>Next.js API routes proxy requests to the FikaMarket backend, keeping the backend URL server side.</p>
+<pre><code class="language-js">
+import { NextResponse } from 'next/server';
+
+export async function POST(request) {
+  try {
+    const body = await request.json();
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    const backendResponse = await fetch(`${backendUrl}/users/login`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+
+    const data = await backendResponse.json();
+    return NextResponse.json(data, { status: backendResponse.status });
+  } catch (error) {
+    return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
+  }
+}
+</code></pre>
+<pre><code class="language-js">
+import { NextResponse } from 'next/server';
+
+export async function POST(request) {
+  try {
+    const body = await request.json();
+    const backendUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    const backendResponse = await fetch(`${backendUrl}/users/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+
+    const data = await backendResponse.json();
+    return NextResponse.json(data, { status: backendResponse.status });
+  } catch (error) {
+    return NextResponse.json({ message: 'Internal Server Error' }, { status: 500 });
+  }
+}
+</code></pre>
+<p>frontend.md2
+<strong>API client</strong></p>
+<p>A shared client wraps <code>fetch</code> calls with automatic auth header injection and consistent error handling, this ia so individual pages do not repeat that logic.</p>
+<pre><code class="language-js">
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || &quot;&quot;;
+
+function buildUrl(path) {
+  return `${API_BASE}${path}`;
+}
+
+function getAuthHeaders() {
+  const token =
+    typeof window !== &quot;undefined&quot; ? localStorage.getItem(&quot;fikamarket_token&quot;) : null;
+  const headers = { &quot;Content-Type&quot;: &quot;application/json&quot; };
+  if (token) {
+    headers[&quot;Authorization&quot;] = `Bearer ${token}`;
+  }
+  return headers;
+}
+
+export async function apiGet(path) {
+  const res = await fetch(buildUrl(path), { headers: getAuthHeaders() });
+  if (!res.ok) throw new Error(`Request failed (${res.status})`);
+  return res.json();
+}
+
+export async function apiPost(path, body) {
+  const res = await fetch(buildUrl(path), {
+    method: &quot;POST&quot;,
+    headers: getAuthHeaders(),
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) throw new Error(`Request failed (${res.status})`);
+  return res.json();
+}
+</code></pre>
+<p><strong>Service files</strong></p>
+<p>Requests are grouped by resource, this is so each file owns one part of the backend surface.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Endpoint</th>
+<th>Handles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lib/api/listings.js</code></td>
+<td><code>/produce-listings/</code></td>
+<td>Fetching and managing produce listings</td>
+</tr>
+<tr>
+<td><code>lib/api/orders.js</code></td>
+<td><code>/orders/</code></td>
+<td>Order lookup and status updates</td>
+</tr>
+<tr>
+<td><code>lib/api/payments.js</code></td>
+<td><code>/payments/</code></td>
+<td>Transaction records</td>
+</tr>
+<tr>
+<td><code>lib/api/collection-points.js</code></td>
+<td><code>/collection-points/</code></td>
+<td>Collection point details</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-js">
+import { apiGet, apiPost } from &quot;./client&quot;;
+
+export async function getOrders() {
+  return apiGet(&quot;/orders/&quot;);
+}
+
+export async function getOrderById(orderId) {
+  return apiGet(`/orders/${orderId}`);
+}
+
+export async function confirmHandover(orderId, data) {
+  return apiPost(`/orders/${orderId}/confirm`, data);
+}
+</code></pre>
+<h3 id="login-signup-pages">Login &amp; Signup Pages</h3>
+<p>The login page collects the phone number and password, submits them to <code>/api/login</code>, stores the returned token, and redirects to <code>/dashboard</code> on success. An error message displays on failed attempts.</p>
+<p>The signup page collects the Lead Farmer's name, email, phone, and assigned collection point, then submits to <code>/api/signup</code>. Password fields validate for minimum length before submission is allowed.</p>
+<h3 id="forgot-reset-password">Forgot &amp; Reset Password</h3>
+<p>The forgot password page collects an email address and requests a reset link from <code>/api/users/forgot-password</code>. On success, a confirmation message displays on the page, it does not reveal whether the email exists, to avoid leaking account information.</p>
+<p>The reset password page reads a token from the URL query string, collects a new password with confirmation, and submits both to the backend for validation.</p>
+<pre><code class="language-js">async function handleSubmit(email) {
+  const data = await apiPost(&quot;/users/forgot-password&quot;, { email });
+  return data.message || &quot;Check your email for a reset link.&quot;;
+}
+</code></pre>
+<h3 id="shared-components">Shared Components</h3>
+<p>Reusable pieces used across dashboard pages:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Button.js</code></td>
+<td>Primary/secondary/danger button variants with a loading state</td>
+</tr>
+<tr>
+<td><code>Input.js</code></td>
+<td>Labeled text input with inline error display</td>
+</tr>
+<tr>
+<td><code>LoadingScreen.js</code></td>
+<td>Full page loading overlay</td>
+</tr>
+<tr>
+<td><code>Sidebar.js</code></td>
+<td>Navigation for all desktop screens</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-js">
+export default function Button({
+  children,
+  variant = &quot;primary&quot;,
+  isLoading = false,
+  disabled,
+  ...props
+}) {
+  const variantStyles = {
+    primary: &quot;bg-[#006838] hover:bg-[#004D29] text-white&quot;,
+    secondary: &quot;bg-gray-200 hover:bg-gray-300 text-gray-800&quot;,
+    danger: &quot;bg-red-600 hover:bg-red-700 text-white&quot;,
+  };
+
+  return (
+    &lt;button
+      className={`rounded-lg px-4 py-2 font-semibold transition ${variantStyles[variant]}`}
+      disabled={disabled || isLoading}
+      {...props}
+    &gt;
+      {isLoading ? &quot;Loading...&quot; : children}
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<h3 id="styling">Styling</h3>
+<p>Tailwind CSS is configured with FikaMarket's brand palette rather than the framework defaults.</p>
+<pre><code class="language-js">
+module.exports = {
+  content: [&quot;./app/**/*.{js,jsx}&quot;, &quot;./components/**/*.{js,jsx}&quot;],
+  theme: {
+    extend: {
+      colors: {
+        green: {
+          600: &quot;#006838&quot;,
+          700: &quot;#004D29&quot;,
+        },
+        navy: {
+          600: &quot;#262262&quot;,
+        },
+      },
+      fontFamily: {
+        sans: [&quot;Roboto&quot;, &quot;system-ui&quot;, &quot;sans-serif&quot;],
+      },
+    },
+  },
+};
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary</td>
+<td><code>#006838</code></td>
+<td>Buttons, active nav links</td>
+</tr>
+<tr>
+<td>Primary Dark</td>
+<td><code>#004d29</code></td>
+<td>Hover states</td>
+</tr>
+<tr>
+<td>Accent</td>
+<td><code>#262262</code></td>
+<td>Header bar, section dividers</td>
+</tr>
+<tr>
+<td>Text Primary</td>
+<td><code>#111827</code></td>
+<td>Headings</td>
+</tr>
+<tr>
+<td>Text Secondary</td>
+<td><code>#6b7280</code></td>
+<td>Body copy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="charts">Charts</h3>
+<p>The <code>dashboard/</code> page renders order and revenue trends using Recharts, pulling data from the orders and payments endpoints and rendering a responsive line/bar chart sized to the container.</p>
+<h3 id="error-handling">Error Handling</h3>
+<p>API failures surface consistently: the shared client throws on a non OK response, and calling pages catch that error to show an inline message or retry button rather than a blank screen.</p>
+<pre><code class="language-js">
+import React from &quot;react&quot;;
+
+export class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        &lt;div className=&quot;p-6 text-center&quot;&gt;
+          &lt;p className=&quot;text-gray-600&quot;&gt;Something went wrong, try again later.&lt;/p&gt;
+          &lt;button
+            onClick={() =&gt; window.location.reload()}
+            className=&quot;mt-4 rounded-lg bg-[#006838] px-4 py-2 text-white&quot;
+          &gt;
+            Reload
+          &lt;/button&gt;
+        &lt;/div&gt;
+      );
+    }
+    return this.props.children;
+  }
+}
+
+**Regression checks**
+
+Before each release, existing flows are reverified against a fixed checklist rather than testing everything from scratch. High risk areas such as (auth, order confirmation, payments) get checked on every merge, the full checklist runs once per sprint before deployment.
+
+| Cycle | When | Coverage |
+|---|---|---|
+| Per merges | Every push to a shared branch |  For high risk paths only |
+| Sprint | End of sprint | Full checklist |
+| Release | Before production deploy | Full checklist &amp;  sign off |
+
+**Bug report format**
+
+```markdown
+## Bug Report
+
+**Title:** [short summary]
+**Severity:** Low / Medium / High / Critical
+**Steps to Reproduce:**
+1. ...
+2. ...
+**Expected:** ...
+**Actual:** ...
+**Environment:** browser/device, OS
+**Logs:** ...
+</code></pre>
+<h3 id="deployment">Deployment</h3>
+<p>The dashboard is deployed on Vercel, which builds automatically from the <code>main</code> branch and generates a preview build for each pull request.</p>
+<pre><code class="language-json">
+{
+  &quot;buildCommand&quot;: &quot;npm run build&quot;,
+  &quot;outputDirectory&quot;: &quot;.next&quot;,
+  &quot;installCommand&quot;: &quot;npm install&quot;,
+  &quot;framework&quot;: &quot;nextjs&quot;,
+  &quot;env&quot;: {
+    &quot;NEXT_PUBLIC_API_URL&quot;: &quot;https://your-backend-url/api/v1&quot;
+  }
+}
+</code></pre>
+<p>Environment variables are set in the Vercel project dashboard, not committed to the repo:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NEXT_PUBLIC_API_URL</code></td>
+<td>Backend API base URL</td>
+</tr>
+<tr>
+<td><code>NEXTAUTH_SECRET</code></td>
+<td>Auth token signing secret</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Manual deploy commands</strong></p>
+<pre><code class="language-bash">vercel --prod       # Deploy to production
+vercel              # Deploy a preview
+vercel logs         # View deployment logs
+</code></pre>
+<p><strong>CI/CD</strong></p>
+<p>A GitHub Actions workflow runs lint and tests on every push and pull request touching the <code>frontend/</code> folder, blocking the merge if checks fail.</p>
+<pre><code class="language-yaml">
+name: Deploy Frontend
+
+on:
+  push:
+    branches: [main]
+    paths: [&quot;frontend/**&quot;]
+  pull_request:
+    branches: [main]
+    paths: [&quot;frontend/**&quot;]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install
+        working-directory: frontend
+      - run: npm run lint
+        working-directory: frontend
+</code></pre>
+<h3 id="performance-optimization">Performance Optimization</h3>
+<p><strong>Route-based code splitting</strong> - Next.js only ships the JavaScript needed for the page being viewed, keeping initial load small.</p>
+<p><strong>Image handling</strong> - the built-in <code>Image</code> component serves optimized, appropriately sized images automatically.</p>
+<pre><code class="language-js">import Image from &quot;next/image&quot;;
+
+export default function ProduceThumbnail() {
+  return (
+    &lt;Image
+      src=&quot;/images/maize.jpg&quot;
+      alt=&quot;Groundnuts (Shelled) listing&quot;
+      width={800}
+      height={400}
+      className=&quot;rounded-lg&quot;
+    /&gt;
+  );
+}
+</code></pre>
+<p><strong>Deferred loading</strong></p>
+<pre><code class="language-js">import dynamic from &quot;next/dynamic&quot;;
+
+const RevenueChart = dynamic(() =&gt; import(&quot;@/components/RevenueChart&quot;), {
+  ssr: false,
+  loading: () =&gt; &lt;p className=&quot;text-gray-500&quot;&gt;Loading chart...&lt;/p&gt;,
+});
+</code></pre>
+<h3 id="security">Security</h3>
+<p><strong>Response headers</strong></p>
+<pre><code class="language-js">
+const securityHeaders = [
+  { key: &quot;Content-Security-Policy&quot;, value: &quot;default-src \'self\'&quot; },
+  { key: &quot;X-Content-Type-Options&quot;, value: &quot;nosniff&quot; },
+  { key: &quot;X-Frame-Options&quot;, value: &quot;DENY&quot; },
+  { key: &quot;Referrer-Policy&quot;, value: &quot;strict-origin-when-cross-origin&quot; },
+];
+</code></pre>
+<p><strong>Input handling</strong></p>
+<pre><code class="language-js">
+import DOMPurify from &quot;dompurify&quot;;
+
+export function sanitizeHTML(html) {
+  return DOMPurify.sanitize(html, {
+    ALLOWED_TAGS: [&quot;b&quot;, &quot;i&quot;, &quot;em&quot;, &quot;strong&quot;, &quot;p&quot;, &quot;br&quot;],
+    ALLOWED_ATTR: [],
+  });
+}
+</code></pre>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Likely cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ECONNREFUSED 127.0.0.1:3000</code></td>
+<td>Dev server is  not running</td>
+<td>Run <code>npm run dev</code></td>
+</tr>
+<tr>
+<td>Build fails on type errors</td>
+<td>TypeScript/JS errors in code</td>
+<td>Run <code>npm run lint</code> and fix reported issues</td>
+</tr>
+<tr>
+<td><code>NEXT_PUBLIC_API_URL is not defined</code></td>
+<td>Missing env var</td>
+<td>Add it to <code>.env.local</code></td>
+</tr>
+<tr>
+<td>CORS errors in development</td>
+<td>Backend not allowing the frontend origin</td>
+<td>Configure CORS on the backend, or route through a Next.js API proxy</td>
+</tr>
+<tr>
+<td>Stale build output</td>
+<td>Cached <code>.next</code> build</td>
+<td>Clear the build cache (below)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Clear the build cache</strong></p>
+<pre><code class="language-bash">rm -rf .next
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

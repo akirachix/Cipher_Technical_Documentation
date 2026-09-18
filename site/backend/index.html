@@ -1,0 +1,1486 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../frontend_mobile/">
+      
+      
+        <link rel="next" href="../security/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Backend - FikaMarket Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fikamarket-api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-header__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FikaMarket Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Backend
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FikaMarket Technical Documentation" class="md-nav__button md-logo" aria-label="FikaMarket Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    FikaMarket Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend_web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend_mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech Stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-api-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live API Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main API Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication &amp; Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produce-listings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produce Listings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collection-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collection Points
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ussd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USSD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Integrations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postman-test-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Postman Test Scripts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Postman Test Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payment-verifying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payment - Verifying
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tech-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech Stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#live-api-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Live API Documentation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Main API Endpoints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Main API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication &amp; Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produce-listings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Produce Listings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orders
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#payments" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payments
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#collection-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collection Points
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reference-prices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Prices
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ussd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USSD
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        External Integrations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#postman-test-scripts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Postman Test Scripts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Postman Test Scripts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payment-verifying" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payment - Verifying
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Implementation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fikamarket-api-reference">FikaMarket API Reference</h1>
+<p>Welcome to the <strong>FikaMarket API Reference</strong>. The FikaMarket backend connects the PWA, USSD service, database, and external services used for produce listings, orders, payments, locations, notifications, and market prices.</p>
+<hr />
+<h2 id="tech-stack">Tech Stack</h2>
+<p>FikaMarket uses the following technologies:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Framework</td>
+<td>FastAPI</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>Python</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>PostgreSQL</td>
+</tr>
+<tr>
+<td>ORM</td>
+<td>SQLAlchemy</td>
+</tr>
+<tr>
+<td>Database Migration</td>
+<td>Alembic</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>JWT</td>
+</tr>
+<tr>
+<td>Password Hashing</td>
+<td>bcrypt</td>
+</tr>
+<tr>
+<td>Hosting</td>
+<td>Heroku</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>GitHub Actions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="live-api-documentation">Live API Documentation</h2>
+<p>The FikaMarket API is hosted on Heroku.</p>
+<ul>
+<li><strong>Production API:</strong> <a href="https://fikamarket-0f4a777f24f8.herokuapp.com/">Open FikaMarket API</a></li>
+<li><strong>Swagger UI:</strong> <a href="https://fikamarket-0f4a777f24f8.herokuapp.com/docs">View Swagger Documentation</a></li>
+<li><strong>OpenAPI Specification:</strong> <a href="https://fikamarket-0f4a777f24f8.herokuapp.com/openapi.json">View OpenAPI</a></li>
+</ul>
+<p>Swagger provides an interactive page where developers and testers can view and test the available API endpoints.</p>
+<hr />
+<div style="text-align: center; margin: 20px 0;">
+  <a href="../assets/datamodel.png" target="_blank" style="display: inline-block; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="../assets/datamodel.png" alt="Data Models Diagram" style="max-width: 100%; height: auto; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(21, 74, 10, 0.1); transition: all 0.3s ease;" />
+  </a>
+  <p style="font-size: 0.9em; color: #0a270d; margin-top: 8px;"><em>Data Models Overview</em></p>
+</div>
+
+<h2 id="backend-architecture">Backend Architecture</h2>
+<p>The backend is divided into simple layers. Each layer has a specific responsibility.</p>
+<pre><code class="language-text">PWA / USSD
+     ↓
+  Routers
+     ↓
+  Schemas
+     ↓
+  Services
+     ↓
+Repositories
+     ↓
+   Models
+     ↓
+ PostgreSQL
+</code></pre>
+<ul>
+<li><strong>Routers</strong> receive requests from the frontend.</li>
+<li><strong>Schemas</strong> check that the information is valid.</li>
+<li><strong>Services</strong> contain the main business rules.</li>
+<li><strong>Repositories</strong> communicate with the database.</li>
+<li><strong>Models</strong> describe how information is stored.</li>
+</ul>
+<p>This structure keeps the backend organized and easier to maintain.</p>
+<hr />
+<h2 id="main-api-endpoints">Main API Endpoints</h2>
+<p>The API is organized into the following main areas.</p>
+<h3 id="authentication-users">Authentication &amp; Users</h3>
+<pre><code class="language-text">POST   /users/              # Register or create a user
+POST   /users/login         # Login
+GET    /users/              # Get users
+</code></pre>
+<p>Authentication allows farmers, buyers, and lead farmers to securely access the system.</p>
+<h3 id="produce-listings">Produce Listings</h3>
+<pre><code class="language-text">POST   /produce-listings/           # Create a produce listing
+GET    /produce-listings/           # View available produce
+GET    /produce-listings/{id}       # View a specific listing
+</code></pre>
+<p>Farmers use produce listings to make crops available to buyers.</p>
+<h3 id="orders">Orders</h3>
+<pre><code class="language-text">POST   /orders/                     # Create an order
+GET    /orders/                     # View orders
+GET    /orders/{id}                 # View an order
+</code></pre>
+<p>Orders connect buyers with available produce.</p>
+<h3 id="payments">Payments</h3>
+<pre><code class="language-text">POST   /payments/                   # Initiate payment
+GET    /payments/{id}               # View payment
+GET    /payments/                   # View payments
+</code></pre>
+<p>Payments are processed through Flutterwave and held in escrow until the collection process is confirmed.</p>
+<h3 id="collection-points">Collection Points</h3>
+<pre><code class="language-text">POST   /collection-points/          # Create collection point
+GET    /collection-points/          # View collection points
+</code></pre>
+<p>Collection points identify where buyers collect their produce.</p>
+<h3 id="locations">Locations</h3>
+<pre><code class="language-text">POST   /locations/                  # Create or process location
+GET    /locations/                  # View locations
+</code></pre>
+<p>Location information can be processed using LocationIQ to obtain physical addresses.</p>
+<h3 id="notifications">Notifications</h3>
+<pre><code class="language-text">POST   /notifications/              # Send notification
+GET    /notifications/              # View notifications
+</code></pre>
+<p>Notifications are used for SMS and other system messages.</p>
+<h3 id="reference-prices">Reference Prices</h3>
+<pre><code class="language-text">GET    /reference-prices/           # View commodity prices
+</code></pre>
+<p>Market-price information is retrieved from WFP/HDX and stored for use by the platform.</p>
+<h3 id="ussd">USSD</h3>
+<pre><code class="language-text">POST   /ussd/                       # Handle USSD requests
+</code></pre>
+<p>The USSD service allows farmers to interact with FikaMarket without requiring a smartphone.</p>
+<p>The local Swagger documentation is available at:</p>
+<p><a href="http://127.0.0.1:8000/docs">Open Local Swagger</a></p>
+<hr />
+<h2 id="api-error-handling">API Error Handling</h2>
+<p>The API uses standard HTTP status codes to communicate the result of a request.</p>
+<table id="error-table" style="width: 100%; border-collapse: collapse; margin: 15px 0; transition: transform 0.3s ease;">
+  <thead>
+    <tr style="background-color: #f44336; color: white;">
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left; width: 15%;">Code</th>
+      <th style="padding: 12px; border: 1px solid #ddd; text-align: left; width: 85%;">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">200</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Request successful</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">400</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Invalid or missing information</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">401</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Authentication required</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">402</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Payment was not completed</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">403</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">User does not have permission</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">404</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Requested resource was not found</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">409</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Request conflicts with existing data</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">422</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Submitted information is invalid</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">429</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Too many requests</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">500</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Server or database error</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">502</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Bad Gateway</td>
+    </tr>
+    <tr>
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">503</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Service Unavailable</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">504</td>
+      <td style="padding: 10px; border: 1px solid #ddd;">Gateway Timeout</td>
+    </tr>
+  </tbody>
+</table>
+
+<p> Instead of guessing what went wrong, external systems can instantly identify whether a request succeeded, failed due to a user error, or failed because of a server issue.</p>
+
+<hr />
+<h2 id="database">Database</h2>
+<p>FikaMarket uses <strong>PostgreSQL</strong> to store application data.</p>
+<p>The main data models include:</p>
+<ul>
+<li>Users</li>
+<li>Produce Listings</li>
+<li>Orders</li>
+<li>Payments</li>
+<li>Collection Points</li>
+<li>Locations</li>
+<li>Notifications</li>
+<li>Reference Prices</li>
+</ul>
+<p>For a detailed explanation of the database tables, fields, relationships, and ERD, see the:</p>
+<p><a href="https://docs.google.com/document/d/1-pXK5n20J3vBMMBjf67ZazjG4iUCKQ5R0snlki0V514/edit?tab=t.0"><strong>FikaMarket Data Model Documentation</strong></a></p>
+<p>Database changes are managed using <strong>Alembic</strong>.</p>
+<hr />
+<h2 id="external-integrations">External Integrations</h2>
+<p>The FikaMarket API connects to several external services.</p>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Africa's Talking</td>
+<td>USSD and SMS</td>
+</tr>
+<tr>
+<td>Flutterwave</td>
+<td>Payment and escrow</td>
+</tr>
+<tr>
+<td>WFP/HDX</td>
+<td>Market-price data</td>
+</tr>
+<tr>
+<td>LocationIQ</td>
+<td>Geocoding</td>
+</tr>
+<tr>
+<td>Telecom Service</td>
+<td>Mobile-money verification</td>
+</tr>
+<tr>
+<td>Mobile Money</td>
+<td>Farmer payouts</td>
+</tr>
+</tbody>
+</table>
+<p>The backend acts as the central connection between these services and the FikaMarket applications.</p>
+<p>For example:</p>
+<pre><code class="language-text">Buyer
+  ↓
+PWA
+  ↓
+FikaMarket API
+  ↓
+Flutterwave
+  ↓
+Payment / Escrow
+  ↓
+Mobile Money
+</code></pre>
+<hr />
+<h2 id="api-testing">API Testing</h2>
+<p>The API can be tested using:</p>
+<ul>
+<li><strong>Swagger UI</strong> for interactive endpoint testing</li>
+<li><strong>Postman</strong> for API test collections</li>
+<li>Automated tests for validation, security, payments, and business rules</li>
+</ul>
+<div style="text-align: center; margin: 20px 0;">
+  <a href="../assets/image.png" target="_blank" style="display: inline-block; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="../assets/image.png" alt="testing sample Diagram" style="max-width: 100%; height: auto; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(31, 113, 14, 0.1); transition: all 0.3s ease;" />
+  </a>
+  <p style="font-size: 0.9em; color: #06480e; margin-top: 8px;"><em>postman testing Overview</em></p>
+</div>
+
+<p>Testing covers authentication, produce listings, orders, payments, inventory, USSD, notifications, and external integrations.</p>
+<p><a href="https://fikamarket-0f4a777f24f8.herokuapp.com/docs">Open Swagger UI</a></p>
+<h2 id="postman-test-scripts">Postman Test Scripts</h2>
+<p>The following test scripts can be used in Postman to validate API responses.</p>
+<h3 id="payment-verifying">Payment - Verifying</h3>
+<pre><code class="language-javascript">let response = {};
+
+try {
+    response = pm.response.json();
+} catch (e) {
+    response = {};
+}
+
+const scenario = pm.variables.get(&quot;active_scenario&quot;) || &quot;HAPPY_PATH&quot;;
+const status = pm.response.code;
+
+pm.test(&quot;Response execution runtime is under 2000ms&quot;, function () {
+    pm.expect(pm.response.responseTime).to.be.below(2000);
+});
+
+pm.test(&quot;Content-Type metadata is present&quot;, function () {
+    const contentType = pm.response.headers.get(&quot;Content-Type&quot;) || &quot;&quot;;
+    pm.expect(contentType).to.not.be.empty;
+});
+
+if (status === 201) {
+
+    pm.test(&quot;201 - Payment was created successfully&quot;, function () {
+        pm.expect(status).to.eql(201);
+    });
+
+    pm.environment.set(&quot;payment_id&quot;, response.payment_id);
+    pm.environment.set(&quot;tx_ref&quot;, response.transaction_reference);
+    pm.environment.set(&quot;checkout_url&quot;, response.checkout_url);
+
+}
+
+else if (status === 400) {
+
+    pm.test(&quot;400 - Payment request contains invalid or missing data&quot;, function () {
+        pm.expect(status).to.eql(400);
+    });
+
+    pm.test(&quot;400 - Error response contains detail&quot;, function () {
+        pm.expect(response).to.have.property(&quot;detail&quot;);
+    });
+}
+
+</code></pre>
+<hr />
+<h2 id="code-structure">Code Structure</h2>
+<p>The backend follows a layered folder structure:</p>
+<pre><code class="language-text">FikaMarket/
+├── models/
+├── repositories/
+├── routers/
+├── schemas/
+├── services/
+├── config.py
+├── database.py
+├── main.py
+├── requirements.txt
+└── Procfile
+</code></pre>
+<p>The folders separate database models, API routes, validation, business logic, and database operations.</p>
+<p>Python naming conventions are used, including <code>snake_case</code> for files, functions, and variables and <code>PascalCase</code> for classes.</p>
+<hr />
+<h2 id="security-implementation">Security Implementation</h2>
+<p>The implementation safely intercepts, hashes, and validates inbound credentials while restricting access workflows exclusively to verified users.</p>
+<div style="text-align: center; margin: 20px 0;">
+  <a href="../assets/security.png" target="_blank" style="display: inline-block; transition: transform 0.3s ease; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    <img src="../assets/security.png" alt="Security Implementation" style="max-width: 100%; height: auto; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(21, 74, 10, 0.1); transition: all 0.3s ease;" />
+  </a>
+  <p style="font-size: 0.9em; color: #0a270d; margin-top: 8px;"><em>Security Implementation</em></p>
+</div>
+
+<hr />
+<h2 id="deployment">Deployment</h2>
+<p>FikaMarket is hosted on <strong>Heroku</strong> and utilizes a fully automated Continuous Integration and Continuous Deployment (CI/CD) pipeline powered by GitHub Actions. This setup ensures that new features and bug fixes are automatically tested and safely published without manual intervention.</p>
+<p>The deployment process uses GitHub Actions:</p>
+<pre><code class="language-text">Developer
+    ↓
+GitHub
+    ↓
+GitHub Actions
+    ↓
+Heroku
+    ↓
+FikaMarket API
+</code></pre>
+<p>GitHub Actions can run automated checks before changes are deployed.</p>
+<p>The project uses a <code>Procfile</code> to define how the application runs and <code>requirements.txt</code> to define its Python dependencies.</p>
+<hr />
+<h2 id="api-setup">API Setup</h2>
+<p>For local development:</p>
+<pre><code class="language-bash">git clone git@github.com:akirachix/Cipher_Backend.git
+cd Cipher_Backend
+
+python -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
+
+alembic upgrade head
+
+uvicorn main:app --reload
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
